@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
 import BiddingBooking from "../../screens/consignee/BiddingBooking";
 import Dashboard from "../../screens/consignee/Dashboard";

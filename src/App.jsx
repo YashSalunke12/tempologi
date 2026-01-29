@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import ConsigneeRouting from './routes/consignee/routing';
+import ConsigneeRouting from './routes/consignee/Routing';
 import AuthRouting from './routes/auth/Routing';
 import TempoTruckRouting from './routes/tempoOwner/Routing';
 import AdminRouting from './routes/admin/Routing';
