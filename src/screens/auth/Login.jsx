@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Truck, User, Building2, Mail, Lock } from "lucide-react";
+import { Truck, User, Building2, Mail, Lock, Shield } from "lucide-react";
 
 export default function Login() {
   const [role, setRole] = useState("Consignee");
@@ -12,13 +12,15 @@ export default function Login() {
     { label: "Tempo Owner", icon: <Truck className="w-4 h-4" /> },
     { label: "Consignee", icon: <User className="w-4 h-4" /> },
     { label: "Corporate Client", icon: <Building2 className="w-4 h-4" /> },
+    { label: "Admin", icon: <Shield className="w-4 h-4" /> },
   ];
 
   // Dummy credentials for each role
   const dummyCredentials = {
     "Tempo Owner": { email: "tempoowner@example.com", password: "password123" },
     "Consignee": { email: "consignee@example.com", password: "password123" },
-    "Corporate Client": { email: "corporate@example.com", password: "password123" }
+    "Corporate Client": { email: "corporate@example.com", password: "password123" },
+    "Admin": { email: "admin@tempologi.com", password: "admin123" }
   };
 
   const handleLogin = (e) => {
@@ -161,6 +163,9 @@ export default function Login() {
         <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-100">
           <p className="text-xs text-blue-800 text-center">
             <strong>Demo:</strong> Each role has pre-filled credentials. Select a role and click "Quick Login"
+          </p>
+          <p className="text-xs text-gray-600 text-center mt-1">
+            Admin: admin@tempologi.com / admin123
           </p>
         </div>
       </Card>
